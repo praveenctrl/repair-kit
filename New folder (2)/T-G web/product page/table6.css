@@ -1,0 +1,76 @@
+body{
+    height: 100%;
+}
+body{
+    margin: 0;
+    background: linear-gradient(45deg,#afd6e9,white);
+    font-family: sans-serif;
+    font-weight: 100;
+    text-align: center;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+table{
+    width: 800px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1 green, blue, alpha);
+    
+}
+th,
+td{
+    padding: 15px;
+    background-color: rgba(255, 255green, 255blue, 0.2alpha);
+    color: #000000;
+    border: 1px solid black;
+}
+th{
+    text-align: center;
+}
+  thead th{
+    background-color: rgb(179, 210, 236);
+  }
+   tbody tr:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+   }
+
+   tbody td{
+    position: relative;
+   }
+   tbody td:hover::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255,255 green,255 blue,0.2 alpha);
+  z-index: -1;
+   }
+
+
+   .back-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+ }
+ 
+ .back-button:hover {
+    background-color: #ddd;
+    color: #000;
+ }
+  

@@ -1,0 +1,495 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap");
+body,html{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  outline: none;
+  border: none;
+  transition: 0.2s ease-in-out;
+ color: #f5f3f3;
+  text-decoration: none;
+}
+
+::selection {
+  background-color: var(--Soft-Red);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--Soft-Blue);
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--Very-Dark-Blue);
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  
+}
+
+.heading h1 {
+  padding-bottom: 2rem;
+}
+
+.heading p {
+  max-width: 60rem;
+  margin: auto;
+  color: var(--Grayish-Blue);
+  font-size: 1.7rem;
+}
+
+.all-btn {
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  background-color: var(--Soft-Blue);
+  border-radius: 0.5rem;
+  color: #fff;
+}
+
+.all-btn:hover {
+  background-color: transparent;
+  color: var(--Soft-Blue);
+  border: 2px solid var(--Soft-Blue);
+}
+
+:root {
+  --Soft-Blue:#252b46;
+  --Soft-Red: hsl(0, 94%, 66%);
+  --Grayish-Blue: hsl(0, 0%, 100%);
+  --Very-Dark-Blue: hsl(229, 31%, 21%);
+ /* --box-shadow: 0.5rem 0.5rem 0 hsl(231, 69%, 60%) */;
+  --text-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.2);
+  --border: 0.2rem solid var(--green);
+}
+
+/* navbar sections starts */
+.header {
+  padding: 3rem 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0%;
+  left: 0;
+  z-index: 100;
+  background-color: white;
+  box-shadow: 0rem 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+ 
+}
+
+
+.header .navbar a {
+  margin-left: 2rem;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  color: #000;
+ 
+
+}
+
+
+.header .navbar a:hover {
+  color: var(--Soft-Red);
+
+}
+
+.header .navbar .btn {
+  padding: 0.6rem 3rem;
+  background-color: var(--Soft-Red);
+  color: #fe5c43;
+  border-radius: 0.5rem;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.header .navbar .btn:hover {
+  color: var(--Soft-Red);
+  background-color: transparent;
+  border: 2px solid var(--Soft-Red);
+}
+
+#menu-btn {
+  padding: 1rem 1rem;
+  background-color: #eee;
+  font-size: 3rem;
+  color: var(--Soft-Blue);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+/* Media Queries */
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: initial;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 115%;
+    right: 2rem;
+    box-shadow: var(--box-shadow);
+    width: 33rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--Soft-Blue);
+    background-color: black;
+    transform: scale(0);
+    transform-origin: top right;
+    
+  }
+
+  .header .navbar.active {
+    transform: scale(1);
+  }
+
+  .header .navbar a {
+    margin: 2.5rem;
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+/* navbar sections ends */
+
+/* home section starts  */
+
+.home {
+  padding-top: 15rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  /* main property for responsiveness */
+  gap: 1.5rem;
+  background-color: #f08666;
+}
+
+.home .image {
+  flex: 1 1 45rem;
+}
+
+.home .image img {
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.home .content {
+  flex: 1 1 45rem;
+}
+
+.home .content h1 {
+  font-size: 4.5rem;
+  padding-block-end: 1rem 0;
+  color: white
+}
+
+.home .content p {
+  font-size: 1.7rem;
+  padding: 1rem 0;
+  max-width: 40rem;
+  color: var(--Grayish-Blue);
+  padding-bottom: 4rem;
+}
+
+.home .content .home-btn {
+  padding: 1.3rem 2rem;
+  background-color: #fff;
+  color: #000;
+  font-size: 1.4rem;
+/*  box-shadow: 0.5rem 0.5rem hsl(231, 14%, 90%) */;
+  border: 2px solid var(--Soft-Blue);
+  border-radius: 0.5rem;
+}
+
+.home .content .home-btn:hover {
+  background-color: var(--Soft-Blue);
+  box-shadow: none;
+  color: #fff;
+}
+
+/* home section ends */
+
+/* features section starts  */
+.features{
+  background-color: #d89e83;
+}
+.features .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+  font-size: large;
+}
+
+.features .row .image {
+  flex: 0 0 30rem;
+}
+
+.features .row .image img {
+  width: 100%;
+}
+
+.features .row .content {
+  flex: 1  4rem;
+}
+
+.features .row .content h1 {
+  font-size: 4rem;
+  padding: 1rem 0;
+  color: var(--Very-Dark-Blue);
+}
+
+.features .row .content p {
+  font-size: 1.7rem;
+  padding: 1rem 0;
+  color: var(--Grayish-Blue);
+  padding-bottom: 4rem;
+}
+/* features section ends */
+
+/* downloads section starts  */
+
+.download .box-container {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  
+}
+
+.download .box {
+  border: 2px solid var(--Soft-Blue);
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 2.5rem;
+
+}
+.download .box:hover {
+  border: 2px solid var(--Soft-Blue);
+  box-shadow: none;
+}
+
+.download .box h3 {
+  font-size: 2rem;
+  padding: 1rem 0;
+  color: var(--Very-Dark-Blue);
+}
+
+.download .box p {
+  font-size: 1.7rem;
+  padding-bottom: 2.5rem;
+  color: white;
+}
+.download{
+  background-color:  #e49a84; /* Change this to your desired color */
+}
+
+
+/* downloads section ends */
+
+/* footer section starts */
+
+/* godofhell footer */
+.footer {
+    border: 1px solid rgba(255, 255, 255, 0.911);
+    border-left: hidden;
+    border-right: hidden;
+    background-color: #000;
+    
+}
+
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 2rem;
+  
+}
+
+.footer .box-container .box h3 {
+  font-size: 2.5rem;
+  color: var(--black);
+  padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+}
+
+.footer .box-container .box a i {
+  padding-right: 0.5rem;
+  color: var(--green);
+}
+
+.footer .box-container .box a:hover i {
+  padding-right: 1rem;
+  color: var(--Soft-Blue);
+
+}
+
+.footer .credit {
+  padding: 1rem;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #f1efef;
+  border-top: 0.1rem solid rgba(240, 237, 237, 0.1);
+}
+
+.footer .credit span {
+  color:#603917;
+  cursor: pointer;
+}
+
+.credit{
+    /* border: 1px solid black; */
+    /* background-color: rgba(0, 0, 255, 0.582); */
+}
+
+/* footer section ends */
+
+/* start  redirect button */
+/* Add this CSS to your existing stylesheet or in the <style> tag in your HTML */
+.up-arrow-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  /* background-color: #555; */
+  background-color: var(--Soft-Blue);
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 50px;
+  border-radius: 50%;
+  z-index: 99;
+}
+
+.up-arrow-btn:hover {
+  background-color: #777;
+  /* background-color: var(--Soft-Blue); */
+}
+
+
+
+
+.box1{
+    border-right: 1 px solid black;
+}
+
+.footer .box-container .box{
+    /* border: 1px solid black; */
+    border-right: 1px solid rgba(0, 0, 0, 0.164);
+}
+
+.footer .box-container .box4{
+    border: none;
+    margin-left: 80px;
+}
+
+.footer .box-container .box3{
+    margin-right: 30px;
+    width:350px;
+   
+}
+
+@media (max-width: 650px) {
+    .footer .box-container .box {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+        border-right: hidden;
+  }
+  .footer .box-container .box4{
+    border: none;
+    margin-left: 0px;
+}
+}
+
+/* Style for the dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style for the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Style for dropdown links */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change background color on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+.content .separator {
+  border-top: 1px solid black;
+  margin: 20px 0; /* Adjust margin as needed */
+}

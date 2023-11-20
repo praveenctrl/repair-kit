@@ -1,0 +1,49 @@
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  /* Footer styles */
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Container styles */
+  .container {
+    margin-top: 60px; /* Adjust the top margin to accommodate the navbar */
+  }
+  
+  /* Table styles */
+  table {
+    border-collapse: collapse;
+    width: 800px;
+    margin: auto;
+  }
+  
+  /* Table cell styles */
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Table header styles */
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Heading styles */
+  h2 {
+    margin: 0;
+  }
+  
